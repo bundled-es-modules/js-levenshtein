@@ -1,12 +1,15 @@
 {
   "name": "@bundled-es-modules/js-levenshtein",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "mirror of js-levenshtein, bundled and exposed as ES module",
   "author": "Pascal Schilp <pascalschilp@gmail.com>",
-  "main": "index.js",
+  "main": "index-esm.js",
   "type": "module",
-  "exports" : {
-    ".": "./index.js"
+  "exports": {
+    ".": {
+      "import": "./index-esm.js",
+      "require": "./index-cjs.cjs"
+    }
   },
   "scripts": {
     "dev": "node dev.js",
@@ -15,8 +18,10 @@
   "keywords": [],
   "files": ["index.js"],
   "license": "ISC",
-  "devDependencies": {
-    "esbuild": "^0.17.17",
+  "dependencies": {
     "js-levenshtein": "^1.1.6"
+  },
+  "devDependencies": {
+    "esbuild": "^0.17.17"
   }
 }

@@ -5,6 +5,10 @@
   "author": "Pascal Schilp <pascalschilp@gmail.com>",
   "main": "index-esm.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bundled-es-modules/js-levenshtein"
+  },
   "exports": {
     ".": {
       "import": "./index-esm.js",
